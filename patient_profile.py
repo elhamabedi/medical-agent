@@ -19,24 +19,7 @@ class PatientProfile:
         medications: Optional[str] = None,
         lifestyle: Optional[str] = None
     ) -> str:
-        """
-        Create a new patient profile and return patient_id.
-        
-        Args:
-            name: Patient's full name (required)
-            age: Patient's age (required)
-            gender: Patient's gender (required)
-            weight: Weight in kg (optional)
-            height: Height in cm (optional)
-            blood_type: Blood type like A+, B-, etc. (optional)
-            medical_history: Previous medical conditions (optional)
-            allergies: Known allergies (optional)
-            medications: Current medications (optional)
-            lifestyle: Lifestyle information like smoking, exercise (optional)
-            
-        Returns:
-            str: Unique patient_id for the created profile
-        """
+      
         init_database()
         
         patient_id = str(uuid.uuid4())[:8]
